@@ -129,7 +129,6 @@ def main():
         avx = vx * bb_accs[idx]
         avy = vy * bb_accs[idx]
 
-        
         screen.blit(kk_img, kk_rct)
         bb_rct.move_ip(avx,avy) #爆弾移動
         yoko, tate = check_bound(bb_rct)
