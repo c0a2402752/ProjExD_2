@@ -48,15 +48,16 @@ def main():
             if event.type == pg.QUIT: 
                 return
         screen.blit(bg_img, [0, 0]) 
-
+        if kk_rct.colliderect(bb_rct):
+            return #ゲームオーバー
         key_lst = pg.key.get_pressed()
         sum_mv = [0, 0]
         for key, mv in DELTA.items():
             if key_lst[key]:
                 sum_mv[0] += mv[0] #横方向の移動量
-                sum_mv[1] += mv[1] #縦　　〃
+                sum_mv[1] += mv[1] #縦
         # if key_lst[pg.K_UP]:
-        #     sum_mv[1] -= 5
+        #     sum_mv[1] -= 5/
         # if key_lst[pg.K_DOWN]:
         #     sum_mv[1] += 5
         # if key_lst[pg.K_LEFT]:
